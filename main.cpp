@@ -127,16 +127,17 @@ double DoubleType::subtract ( double lhs, double rhs) { return lhs - rhs; }
 double DoubleType::multiply ( double lhs, double rhs) { return lhs * rhs; }
 double DoubleType::divide ( double lhs, double rhs) 
 {
-    if( rhs > 0 ) 
+    if( rhs > 0) 
     {
+        std::cout << std::endl;
+        std::cout << "warning, floating point division by zero returns 'inf' !" << std::endl;
         return lhs / rhs;
     }
     else
     {    
-        std::cout << std::endl;
-        std::cout << "warning, floating point division by zero returns 'inf' !" << std::endl;
+         return lhs / rhs;
     }
-    return lhs / rhs;
+   
 }
 
 struct IntType
